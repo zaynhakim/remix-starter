@@ -1,16 +1,20 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from '@remix-run/node'
+import { ThemeButton } from '~/components/theme.component'
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
-  ];
-};
+    { title: 'New Remix App' },
+    { name: 'description', content: 'Welcome to Remix!' },
+  ]
+}
 
 export default function Index() {
   return (
     <div className="font-sans p-4">
-      <h1 className="text-3xl">Welcome to Remix</h1>
+      <div className="flex items-end justify-between gap-2 my-4">
+        <h1 className="text-3xl">Welcome to Remix</h1>
+        <ThemeButton />
+      </div>
       <ul className="list-disc mt-4 pl-6 space-y-2">
         <li>
           <a
@@ -44,5 +48,5 @@ export default function Index() {
         </li>
       </ul>
     </div>
-  );
+  )
 }
